@@ -94,11 +94,15 @@ Poniższe elementy zostały świadomie oznaczone jako wersja robocza / placehold
 - **Godziny umawiania rozmów** (pon.–pt., 9:00–17:00) to założenie przyjęte
   przy budowie strony — zmień je w sekcji Kontakt i w `assets/js/main.js`
   (lista godzin w `<select>`), jeśli pracujesz w innych godzinach.
-- **Grafika Pixela** — obecna maskotka to nowa, odrębna ilustracja SVG
-  inspirowana koncepcją Pixela (a nie kopia istniejącej grafiki). Jeśli wolisz
-  wykorzystać oryginalną grafikę 3D, podmień SVG w `index.html` na plik
-  graficzny (np. `assets/img/pixel.png` + prosta animacja CSS `@keyframes`
-  na klasie `.pixel-figure`).
+- **Grafika Pixela** — na stronie wykorzystywana jest właściwa ilustracja
+  Pixela (pliki PNG w `assets/img/pixel/`): `pixel-body.png` (sama postać —
+  używana też jako logo w nagłówku i stopce, plik `pixel-logo.png`) oraz
+  kilkanaście osobnych plików `tile-*.png` z unoszącymi się nad nim
+  „pikselikami”, animowanymi w CSS (`.pixel-stage` w `assets/css/style.css`).
+  Aby podmienić grafikę na nowszą wersję, wystarczy nadpisać pliki w tym
+  folderze — pozycje kafelków są ustawione procentowo względem obrazka
+  źródłowego, więc przy innej kompozycji trzeba przeliczyć wartości `left`/
+  `top`/`width` w znacznikach `<img>` (sekcje `#top` i `#pixel` w `index.html`).
 
 ## 5. Edycja treści
 
