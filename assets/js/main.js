@@ -8,10 +8,38 @@ document.addEventListener("DOMContentLoaded", function () {
   initMobileNav();
   initTabs();
   initReveal();
+  initScrollProgress();
   initBookingForm();
   initInterestLinks();
   setYear();
 });
+
+/* --- Pasek postępu czytania na górze strony --- */
+function initScrollProgress() {
+  var bar = document.getElementById("scroll-progress");
+  if (!bar) return;
+
+  var ticking = false;
+
+  function update() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, Math.max(0, pct)) + "%";
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  update();
+}
 
 /* --- Karty oferty: kliknięcie "Zapytaj o tę pozycję" wypełnia temat rozmowy --- */
 function initInterestLinks() {

@@ -7,7 +7,6 @@
 <meta name="description" content="Uczymy dzieci i dorosłych cyfrowego bezpieczeństwa, cyfrowych praw człowieka i RODO — bez straszenia i moralizowania. Poznaj Pixela i umów rozmowę telefoniczną." />
 <link rel="canonical" href="https://mojecyfroweprawa.pl/" />
 
-<!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Moje Cyfrowe Prawa" />
 <meta property="og:title" content="Moje Cyfrowe Prawa — cyfrowe bezpieczeństwo i prawa człowieka bez straszenia" />
@@ -19,10 +18,9 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
 
-<!-- JSON-LD: dane organizacji. Uzupełnij/zweryfikuj pola oznaczone TODO. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,19 +29,18 @@
   "url": "https://mojecyfroweprawa.pl/",
   "email": "sklep@apb-expert.pl",
   "description": "Autorski projekt edukacyjny o cyfrowym bezpieczeństwie, cyfrowych prawach człowieka i RODO — dla dzieci, rodziców, szkół i firm.",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "APB-Expert",
-    "taxID": "9222961822"
-  }
+  "parentOrganization": { "@type": "Organization", "name": "APB-Expert", "taxID": "9222961822" }
 }
 </script>
 </head>
 <body>
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
 <a class="skip-link" href="#content">Przejdź do treści głównej</a>
 
 <header class="site-header">
-  <div class="container site-header__bar">
+  <div class="site-header__bar">
     <a class="brand" href="#top">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect x="3" y="3" width="15" height="15" rx="5" fill="#4E9C90"/>
@@ -92,10 +89,11 @@
 
   <!-- HERO -->
   <section id="top" class="hero container">
+    <div class="mesh mesh--hero" aria-hidden="true"></div>
     <div class="hero__grid">
       <div class="reveal">
         <p class="eyebrow">Moje Cyfrowe Prawa</p>
-        <h1>Zrozumieć internet, zanim zacznie rządzić naszym życiem.</h1>
+        <h1>Zrozumieć internet, zanim zacznie <em>rządzić</em> naszym życiem.</h1>
         <p class="lede">Uczymy dzieci i dorosłych, jak stawiać granice w sieci, znać swoje cyfrowe prawa i rozmawiać o technologii bez strachu i moralizowania. Poznaj Pixela — przewodnika, który pomaga rodzinom, szkołom i organizacjom budować cyfrową świadomość.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#kontakt">Umów rozmowę telefoniczną</a>
@@ -114,9 +112,7 @@
               <rect x="68" y="164" width="20" height="30" rx="8" fill="#35597A"/>
               <rect x="112" y="164" width="20" height="30" rx="8" fill="#35597A"/>
               <rect x="145" y="96" width="22" height="58" rx="11" fill="#4C7EA8"/>
-              <g class="p-arm-l">
-                <rect x="33" y="96" width="22" height="58" rx="11" fill="#4C7EA8"/>
-              </g>
+              <g class="p-arm-l"><rect x="33" y="96" width="22" height="58" rx="11" fill="#4C7EA8"/></g>
               <rect x="55" y="88" width="90" height="78" rx="22" fill="#4C7EA8"/>
               <rect x="80" y="106" width="40" height="26" rx="8" fill="#35597A"/>
               <circle cx="90" cy="119" r="4" fill="#E3AC3D"/>
@@ -137,36 +133,42 @@
     </div>
   </section>
 
-  <!-- PASEK WARTOŚCI -->
-  <div class="container">
-    <div class="value-strip">
-      <div class="value-card reveal">
-        <div class="value-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>
-        </div>
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Bezpieczeństwo online</span><span>Cyfrowe prawa dziecka</span><span>RODO bez żargonu</span><span>Granice, nie zakazy</span><span>Poznaj Pixela</span>
+      <span>Bezpieczeństwo online</span><span>Cyfrowe prawa dziecka</span><span>RODO bez żargonu</span><span>Granice, nie zakazy</span><span>Poznaj Pixela</span>
+    </div>
+  </div>
+
+  <!-- PASEK WARTOŚCI — BENTO -->
+  <div class="container section-pad" style="padding-bottom: var(--space-l);">
+    <div class="bento">
+      <div class="card bento-span-3 reveal">
+        <div class="card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg></div>
         <h3>Bez straszenia</h3>
         <p>Uczymy rozumienia, nie strachu — językiem dopasowanym do wieku, bez moralizowania.</p>
       </div>
-      <div class="value-card reveal">
-        <div class="value-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
-        </div>
+      <div class="card bento-span-3 reveal">
+        <div class="card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></div>
         <h3>Perspektywa eksperta</h3>
         <p>Łączymy wiedzę o cyberbezpieczeństwie z realnym zrozumieniem emocji i relacji.</p>
       </div>
-      <div class="value-card reveal">
-        <div class="value-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 6a4 4 0 0 0 8 0L7 7Zm12 0-3 6a4 4 0 0 0 8 0l-3-6ZM4 7h16"/></svg>
-        </div>
+      <div class="card card--stat bento-span-2 reveal">
+        <div class="stat-num">3</div>
+        <div class="stat-label">grupy odbiorców: rodzice, szkoły, firmy</div>
+      </div>
+      <div class="card bento-span-4 reveal">
+        <div class="card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 6a4 4 0 0 0 8 0L7 7Zm12 0-3 6a4 4 0 0 0 8 0l-3-6ZM4 7h16"/></svg></div>
         <h3>Prawa, nie tylko zasady</h3>
         <p>Pokazujemy, jakie prawa — w tym z RODO — realnie przysługują dzieciom i dorosłym online.</p>
       </div>
-      <div class="value-card reveal">
-        <div class="value-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>
+      <div class="card card--feature bento-span-6 reveal" style="flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-m); flex-wrap: wrap;">
+        <div>
+          <h3>Dla rodzin, szkół i firm</h3>
+          <p>Rozmowa telefoniczna, materiały i pakiety edukacyjne dopasowane do Twojej sytuacji.</p>
         </div>
-        <h3>Dla rodzin, szkół i firm</h3>
-        <p>Rozmowa telefoniczna, materiały i pakiety edukacyjne dopasowane do Twojej sytuacji.</p>
+        <a class="btn btn--light btn--sm" href="#kontakt">Umów rozmowę</a>
       </div>
     </div>
   </div>
@@ -175,9 +177,7 @@
   <section id="o-projekcie" class="section-pad">
     <div class="container mission">
       <div class="reveal">
-        <div class="mission__quote">
-          „Największe wyzwania świata online nie wynikają wyłącznie z technologii. Wynikają z tego, jak z niej korzystamy, co czujemy i jakie granice potrafimy postawić.”
-        </div>
+        <p class="pull-quote">Największe wyzwania świata online nie wynikają wyłącznie z technologii. Wynikają z tego, jak z niej korzystamy, co czujemy i jakie granice potrafimy postawić.</p>
       </div>
       <div class="reveal">
         <p class="eyebrow">O projekcie</p>
@@ -196,7 +196,7 @@
     </div>
   </section>
 
-  <!-- BEZPIECZEŃSTWO -->
+  <!-- BEZPIECZEŃSTWO — BENTO -->
   <section id="bezpieczenstwo" class="section-pad section--alt">
     <div class="container">
       <div class="section-head reveal">
@@ -205,45 +205,35 @@
         <p class="lede">Prawdziwe bezpieczeństwo nie zaczyna się od zakazów. Zaczyna się od zrozumienia, rozmowy i jasnych granic.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">1</div>
-          <div>
-            <h3>Prywatność jako punkt wyjścia</h3>
-            <p>Nie każda informacja musi być publiczna. Uczymy, jak świadomie decydować, co i komu pokazujemy w sieci.</p>
-          </div>
+      <div class="bento">
+        <div class="card bento-span-4 reveal tip-card">
+          <div class="tip-card__num">01</div>
+          <h3>Prywatność jako punkt wyjścia</h3>
+          <p>Nie każda informacja musi być publiczna. Uczymy, jak świadomie decydować, co i komu pokazujemy w sieci.</p>
         </div>
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">2</div>
-          <div>
-            <h3>Granice w relacjach online</h3>
-            <p>Dziecko — i dorosły — ma prawo nie odpowiadać, zablokować i zgłosić. Rozmawiamy, jak z tego prawa korzystać.</p>
-          </div>
+        <div class="card bento-span-2 reveal tip-card">
+          <div class="tip-card__num">02</div>
+          <h3>Granice w relacjach online</h3>
+          <p>Dziecko — i dorosły — ma prawo nie odpowiadać, zablokować i zgłosić.</p>
         </div>
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">3</div>
-          <div>
-            <h3>Presja rówieśnicza i cyfrowa</h3>
-            <p>Lajki, porównania, FOMO. Pokazujemy mechanizmy presji, żeby łatwiej było jej nie ulegać.</p>
-          </div>
+        <div class="card bento-span-2 reveal tip-card">
+          <div class="tip-card__num">03</div>
+          <h3>Presja rówieśnicza i cyfrowa</h3>
+          <p>Lajki, porównania, FOMO. Pokazujemy mechanizmy presji, żeby łatwiej było jej nie ulegać.</p>
         </div>
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">4</div>
-          <div>
-            <h3>Kontakt z obcymi w sieci</h3>
-            <p>Proste zasady rozpoznawania niebezpiecznych sytuacji — dopasowane do wieku, bez katastroficznych scenariuszy.</p>
-          </div>
+        <div class="card bento-span-4 reveal tip-card">
+          <div class="tip-card__num">04</div>
+          <h3>Kontakt z obcymi w sieci</h3>
+          <p>Proste zasady rozpoznawania niebezpiecznych sytuacji — dopasowane do wieku, bez katastroficznych scenariuszy.</p>
         </div>
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">5</div>
-          <div>
-            <h3>Czas ekranowy z głową</h3>
-            <p>Nie chodzi o zakaz technologii, tylko świadome korzystanie — wspólnie ustalone zasady działają lepiej niż zakazy.</p>
-          </div>
+        <div class="card bento-span-3 reveal tip-card">
+          <div class="tip-card__num">05</div>
+          <h3>Czas ekranowy z głową</h3>
+          <p>Nie chodzi o zakaz technologii, tylko świadome korzystanie — wspólnie ustalone zasady działają lepiej niż zakazy.</p>
         </div>
-        <div class="card tip-card reveal">
-          <div class="tip-card__num">6</div>
+        <div class="card card--feature bento-span-3 reveal tip-card">
           <div>
+            <div class="tip-card__num">06</div>
             <h3>Bezpieczeństwo dorosłych</h3>
             <p>Rodzice i nauczyciele też podejmują cyfrowe decyzje — pomagamy im rozumieć ryzyko, zanim staną się dla dzieci przykładem.</p>
           </div>
@@ -259,32 +249,32 @@
 
   <!-- CYFROWE PRAWA CZŁOWIEKA -->
   <section id="prawa-cyfrowe" class="section-pad">
-    <div class="container">
+    <div class="mesh mesh--soft" aria-hidden="true"></div>
+    <div class="container" style="position:relative; z-index:1;">
       <div class="section-head reveal">
         <p class="eyebrow">Cyfrowe prawa człowieka</p>
         <h2>Prawa człowieka nie kończą się w drzwiach do internetu</h2>
         <p class="lede">Wolność wypowiedzi, prawo do prywatności, ochrona przed wyzyskiem i przemocą, dostęp do informacji — to prawa, które obowiązują też online. Dotyczy to w szczególności dzieci.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card reveal">
+      <div class="bento">
+        <div class="card bento-span-4 reveal">
           <span class="tag tag--blue">Prywatność</span>
           <h3>Prawo do prywatności</h3>
           <p>Dane, wizerunek i wiadomości dziecka nie są „materiałem” do dowolnego udostępniania — również przez najbliższych.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-span-2 reveal">
           <span class="tag tag--teal">Ochrona</span>
-          <h3>Ochrona przed krzywdą i wyzyskiem</h3>
-          <p>Prawo do bezpieczeństwa obejmuje ochronę przed przemocą, nękaniem i wykorzystywaniem także w środowisku cyfrowym.</p>
+          <h3>Ochrona przed krzywdą</h3>
+          <p>Prawo do bezpieczeństwa obejmuje ochronę przed przemocą i wykorzystywaniem także online.</p>
         </div>
-        <div class="card reveal">
-          <span class="tag tag--yellow">Głos</span>
-          <h3>Prawo do bycia wysłuchanym</h3>
-          <p>Dzieci mają prawo wyrażać opinie i być traktowane poważnie — także w sprawach dotyczących technologii, z której korzystają.</p>
+        <div class="card card--feature bento-span-6 reveal">
+          <span class="tag" style="background: rgba(227,172,61,.16); color: var(--color-accent-yellow);">Głos</span>
+          <h3 style="font-family: var(--font-display); font-size: var(--step-2); font-weight: 500;">Dzieci mają prawo do bycia wysłuchanym — także w sprawach technologii, z której korzystają.</h3>
         </div>
       </div>
 
-      <p class="reveal" style="margin-top: var(--space-l);">
+      <p class="reveal" style="margin-top: var(--space-l); max-width: 70ch;">
         W 2021 roku Komitet Praw Dziecka ONZ wprost potwierdził (Komentarz Ogólny nr 25), że prawa zapisane w Konwencji o prawach dziecka mają zastosowanie również w środowisku cyfrowym. Coraz częściej mówi się też o prawie dziecka do odpoczynku od bycia online i budowania zdrowej równowagi cyfrowej.
         <br />
         <a href="https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-25-2021-childrens-rights-relation" target="_blank" rel="noopener">Źródło: General Comment No. 25 (2021), OHCHR ↗</a>
@@ -301,33 +291,33 @@
         <p class="lede">Nie tylko w firmowych politykach prywatności — RODO daje konkretne prawa również rodzicom, dzieciom i nauczycielom.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card reveal">
+      <div class="bento">
+        <div class="card bento-span-3 reveal">
           <span class="tag tag--blue">Art. 15</span>
           <h3>Prawo dostępu do danych</h3>
           <p>Możesz zapytać firmę lub szkołę, jakie dane o Tobie — lub Twoim dziecku — przetwarza i w jakim celu.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-span-3 reveal">
           <span class="tag tag--green">Art. 16</span>
           <h3>Prawo do sprostowania</h3>
           <p>Masz prawo poprawić nieaktualne lub błędne dane, jakie ktoś przechowuje na Twój temat.</p>
         </div>
-        <div class="card reveal">
-          <span class="tag tag--pink">Art. 17</span>
+        <div class="card card--feature bento-span-4 reveal">
+          <span class="tag" style="background: rgba(217,138,142,.18); color: #F0B4B8;">Art. 17</span>
           <h3>Prawo do bycia zapomnianym</h3>
           <p>W wielu sytuacjach możesz zażądać usunięcia danych — np. zdjęcia dziecka opublikowanego bez zgody.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-span-2 reveal">
           <span class="tag tag--yellow">Art. 21</span>
           <h3>Prawo do sprzeciwu</h3>
-          <p>Możesz sprzeciwić się przetwarzaniu Twoich danych na potrzeby marketingu bezpośredniego.</p>
+          <p>Możesz sprzeciwić się przetwarzaniu Twoich danych na potrzeby marketingu.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-span-2 reveal">
           <span class="tag tag--blue">Art. 8</span>
-          <h3>Zgoda rodzica na usługi cyfrowe</h3>
-          <p>W Polsce dziecko poniżej 16. roku życia potrzebuje zgody rodzica, by samodzielnie założyć konto w wielu usługach wymagających takiej zgody.</p>
+          <h3>Zgoda rodzica</h3>
+          <p>W Polsce dziecko poniżej 16. roku życia potrzebuje zgody rodzica na wiele usług cyfrowych.</p>
         </div>
-        <div class="card reveal">
+        <div class="card bento-span-4 reveal">
           <span class="tag tag--teal">Art. 20</span>
           <h3>Prawo do przenoszenia danych</h3>
           <p>Możesz pobrać swoje dane w formacie nadającym się do przeniesienia do innej usługi.</p>
@@ -376,7 +366,8 @@
 
   <!-- POZNAJ PIXELA -->
   <section id="pixel" class="section-pad section--ink">
-    <div class="container mission">
+    <div class="mesh mesh--ink" aria-hidden="true"></div>
+    <div class="container mission" style="position:relative; z-index:1;">
       <div class="reveal">
         <p class="eyebrow">Nasz przewodnik</p>
         <h2>To jest Pixel</h2>
@@ -419,7 +410,7 @@
     </div>
   </section>
 
-  <!-- OFERTA -->
+  <!-- OFERTA — BENTO -->
   <section id="oferta" class="section-pad">
     <div class="container">
       <div class="section-head reveal">
@@ -428,8 +419,8 @@
         <p class="lede">Nasza oferta stale się rozwija. Zakupy i zamówienia realizujemy indywidualnie — przez e-mail lub formularz kontaktowy. Napisz, a podpowiemy, co sprawdzi się najlepiej.</p>
       </div>
 
-      <div class="grid-3">
-        <div class="card offer-card reveal">
+      <div class="bento">
+        <div class="card offer-card offer-card--feature bento-span-4 reveal">
           <div class="offer-card__media">
             <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><rect x="12" y="8" width="36" height="44" rx="4"/><line x1="20" y1="20" x2="40" y2="20"/><line x1="20" y1="28" x2="40" y2="28"/><line x1="20" y1="36" x2="32" y2="36"/></svg>
           </div>
@@ -442,46 +433,46 @@
           </div>
         </div>
 
-        <div class="card offer-card reveal">
+        <div class="card offer-card bento-span-2 reveal">
           <div class="offer-card__media">
             <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><path d="M30 12c-9 6-9 24 0 36 9-12 9-30 0-36Z"/><line x1="30" y1="12" x2="30" y2="48"/></svg>
           </div>
           <div class="offer-card__body">
             <span class="tag tag--pink">Nastolatkowie i dorośli</span>
             <h3>„Możesz zniknąć”</h3>
-            <p>Książka o granicach, presji i odpowiedzialności w cyfrowym świecie — bez uproszczeń i moralizowania.</p>
+            <p>Książka o granicach, presji i odpowiedzialności w cyfrowym świecie.</p>
             <p class="offer-card__price">od 54,90 zł <span>+ warianty</span></p>
             <a class="btn btn--ghost btn--sm js-interest" href="#kontakt" data-product="„Możesz zniknąć”">Zapytaj o tę pozycję</a>
           </div>
         </div>
 
-        <div class="card offer-card reveal">
+        <div class="card offer-card bento-span-2 reveal">
           <div class="offer-card__media">
             <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><rect x="10" y="10" width="40" height="40" rx="4"/><path d="M18 24h24M18 32h24M18 40h14"/></svg>
           </div>
           <div class="offer-card__body">
             <span class="tag tag--yellow">Dla rodzin</span>
             <h3>Rodzinny Kontrakt Cyfrowy</h3>
-            <p>Gotowy do wydruku kontrakt PDF, który pomaga ustalić jasne zasady korzystania z internetu i urządzeń w domu.</p>
+            <p>Gotowy do wydruku kontrakt PDF — jasne zasady korzystania z internetu w domu.</p>
             <p class="offer-card__price">29,00 zł</p>
             <a class="btn btn--ghost btn--sm js-interest" href="#kontakt" data-product="Rodzinny Kontrakt Cyfrowy">Zapytaj o tę pozycję</a>
           </div>
         </div>
 
-        <div class="card offer-card reveal">
+        <div class="card offer-card bento-span-2 reveal">
           <div class="offer-card__media">
             <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><circle cx="30" cy="30" r="20"/><path d="M30 18v12l8 6"/></svg>
           </div>
           <div class="offer-card__body">
             <span class="tag tag--teal">PL / EN</span>
             <h3>Ekranowy Dekalog Rodzinny</h3>
-            <p>10 prostych zasad spokojnego korzystania z technologii — dostępny po polsku i angielsku.</p>
+            <p>10 prostych zasad spokojnego korzystania z technologii.</p>
             <p class="offer-card__price">10,00 zł</p>
             <a class="btn btn--ghost btn--sm js-interest" href="#kontakt" data-product="Ekranowy Dekalog Rodzinny">Zapytaj o tę pozycję</a>
           </div>
         </div>
 
-        <div class="card offer-card reveal">
+        <div class="card offer-card bento-span-4 reveal">
           <div class="offer-card__media">
             <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><path d="M14 46V20l16-8 16 8v26"/><path d="M24 46V30h12v16"/></svg>
           </div>
@@ -494,17 +485,13 @@
           </div>
         </div>
 
-        <div class="card offer-card reveal">
-          <div class="offer-card__media">
-            <svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="2.2"><rect x="10" y="16" width="40" height="28" rx="4"/><circle cx="22" cy="30" r="4"/><path d="M34 26h10M34 34h10"/></svg>
-          </div>
-          <div class="offer-card__body">
-            <span class="tag tag--blue">Wkrótce</span>
+        <div class="card card--feature offer-card bento-span-6 reveal" style="flex-direction: row; align-items: center; gap: var(--space-l); flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 240px;">
+            <span class="tag" style="background: rgba(227,172,61,.16); color: var(--color-accent-yellow);">Wkrótce</span>
             <h3>Gra edukacyjna z Pixelem</h3>
             <p>Projekt rozwijany jest o grę, która pozwoli dzieciom uczyć się przez doświadczenie i współpracę.</p>
-            <p class="offer-card__price">W przygotowaniu</p>
-            <a class="btn btn--ghost btn--sm js-interest" href="#kontakt" data-product="Gra edukacyjna z Pixelem (nowość)">Zapytaj o nowości</a>
           </div>
+          <a class="btn btn--light btn--sm js-interest" href="#kontakt" data-product="Gra edukacyjna z Pixelem (nowość)">Zapytaj o nowości</a>
         </div>
       </div>
 
@@ -614,9 +601,12 @@
   <!-- CTA BANNER -->
   <div class="container section-pad" style="padding-top:0;">
     <div class="cta-banner reveal">
-      <h2>Porozmawiajmy o cyfrowym bezpieczeństwie</h2>
-      <p>Twojej rodziny, klasy albo organizacji — bez straszenia, konkretnie i po ludzku.</p>
-      <a class="btn btn--primary" href="#kontakt">Umów rozmowę telefoniczną</a>
+      <div class="mesh mesh--soft" aria-hidden="true" style="opacity:.6;"></div>
+      <div style="position:relative; z-index:1;">
+        <h2>Porozmawiajmy o cyfrowym bezpieczeństwie</h2>
+        <p>Twojej rodziny, klasy albo organizacji — bez straszenia, konkretnie i po ludzku.</p>
+        <a class="btn btn--primary" href="#kontakt">Umów rozmowę telefoniczną</a>
+      </div>
     </div>
   </div>
 
@@ -708,7 +698,12 @@
 </main>
 
 <footer class="site-footer">
+  <div class="mesh mesh--ink" aria-hidden="true"></div>
   <div class="container">
+    <div class="footer-cta reveal">
+      <p class="eyebrow">Zróbmy to razem</p>
+      <a class="footer-cta__link" href="#kontakt">Umów rozmowę <span aria-hidden="true">→</span></a>
+    </div>
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
