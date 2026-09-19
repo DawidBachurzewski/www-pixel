@@ -9,26 +9,42 @@
 
 :root {
   /* --- Kolory marki --- */
+  /* Paleta dostrojona do kolorów maskotki Pixel (błękit ciała, turkusowe
+     kafelki, limonkowe „włosy”, głęboki granat oczu) — ciepła kremowa baza
+     zostaje jako tło, żeby chłodne barwy Pixela dobrze się na niej odcinały.
+     --color-accent-yellow i --color-accent-pink zachowują swoje nazwy (żeby
+     nie trzeba było zmieniać każdego miejsca użycia w kodzie), ale trzymają
+     teraz odpowiednio cyjan i błękitny fiolet — dwa dodatkowe chłodne akcenty
+     zamiast żółci i różu, których u Pixela nie ma. */
   --color-bg: #FBF3E1;
   --color-bg-soft: #FFFDF8;
   --color-surface: #FFFFFF;
-  --color-ink: #1C1F23;
-  --color-ink-soft: #4B5259;
-  --color-muted: #6E7580;
+  --color-ink: #171F26;
+  --color-ink-soft: #46545E;
+  --color-muted: #66727C;
   --color-border: #E8DCC2;
 
-  --color-primary: #B33A31;
-  --color-primary-dark: #8F2D26;
-  --color-primary-soft: #F3D9D3;
+  --color-primary: #0B6FA3;
+  --color-primary-dark: #084F76;
+  --color-primary-soft: #DCEFF6;
 
-  --color-accent-blue: #4C7EA8;
-  --color-accent-blue-dark: #35597A;
-  --color-accent-teal: #4E9C90;
-  --color-accent-green: #83AE63;
-  --color-accent-yellow: #E3AC3D;
-  --color-accent-pink: #D98A8E;
+  /* Kolor błędów formularza — odłączony od --color-primary, żeby błąd nadal
+     czytał się jako błąd, a nie jak zwykły niebieski link/przycisk. */
+  --color-danger: #B33A31;
+  --color-danger-dark: #8F2D26;
+  --color-danger-soft: #F3D9D3;
+  /* Ciepła "uwaga" na ciemnym tle (np. notatki "do uzupełnienia" w stopce) —
+     --color-danger nie ma tu dość kontrastu na ciemnym --color-ink. */
+  --color-warning-on-dark: #F0A87A;
 
-  --color-focus: #2F6FB3;
+  --color-accent-blue: #2FA8E0;
+  --color-accent-blue-dark: #0E6B96;
+  --color-accent-teal: #1FB6AC;
+  --color-accent-green: #5FAE33;
+  --color-accent-yellow: #33D9F0;
+  --color-accent-pink: #5C7AE0;
+
+  --color-focus: var(--color-primary);
 
   /* --- Typografia: serif edytorialski + sans do UI/treści --- */
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -61,11 +77,11 @@
   --shadow-m: 0 16px 40px rgba(28, 31, 35, 0.10);
   --shadow-l: 0 30px 70px rgba(28, 31, 35, 0.16);
 
-  --glow-primary: 0 24px 60px -22px rgba(179, 58, 49, 0.55);
-  --glow-blue: 0 24px 60px -22px rgba(76, 126, 168, 0.5);
-  --glow-teal: 0 24px 60px -22px rgba(78, 156, 144, 0.5);
-  --glow-yellow: 0 24px 60px -22px rgba(227, 172, 61, 0.5);
-  --glow-pink: 0 24px 60px -22px rgba(217, 138, 142, 0.5);
+  --glow-primary: 0 24px 60px -22px rgba(11, 111, 163, 0.55);
+  --glow-blue: 0 24px 60px -22px rgba(47, 168, 224, 0.5);
+  --glow-teal: 0 24px 60px -22px rgba(31, 182, 172, 0.5);
+  --glow-yellow: 0 24px 60px -22px rgba(51, 217, 240, 0.5);
+  --glow-pink: 0 24px 60px -22px rgba(92, 122, 224, 0.5);
 
   --container-max: 1240px;
   --header-h: 92px;
@@ -595,10 +611,10 @@ section { position: relative; }
   margin-bottom: var(--space-xs);
 }
 .tag--blue { background: #E4EEF6; color: var(--color-accent-blue-dark); }
-.tag--teal { background: #E1F1EE; color: #2E655C; }
-.tag--green { background: #EAF2E1; color: #4C6636; }
-.tag--yellow { background: #FBEDD3; color: #8A6114; }
-.tag--pink { background: #F7E4E5; color: #9C4E52; }
+.tag--teal { background: #E1F1EE; color: #145F58; }
+.tag--green { background: #EAF2E1; color: #3E6B22; }
+.tag--yellow { background: #DFF7FA; color: #0E6E80; }
+.tag--pink { background: #E7EAFC; color: #3E4FA0; }
 
 .section--alt { background: var(--color-surface); border-block: 1px solid var(--color-border); }
 .section--ink { background: var(--color-ink); color: #fff; overflow: hidden; }
@@ -768,8 +784,8 @@ section { position: relative; }
 }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--color-focus); outline: none; }
 .field textarea { resize: vertical; min-height: 110px; }
-.field.has-error input, .field.has-error select, .field.has-error textarea { border-color: var(--color-primary); }
-.field__error { display: none; color: var(--color-primary-dark); font-size: 0.82rem; font-weight: 600; }
+.field.has-error input, .field.has-error select, .field.has-error textarea { border-color: var(--color-danger); }
+.field__error { display: none; color: var(--color-danger-dark); font-size: 0.82rem; font-weight: 600; }
 .field.has-error .field__error { display: block; }
 
 .consent { display: flex; gap: 0.6em; align-items: flex-start; font-size: 0.85rem; color: var(--color-ink-soft); margin-bottom: var(--space-m); }
@@ -778,7 +794,7 @@ section { position: relative; }
 .form-status { margin-top: var(--space-m); padding: var(--space-s) var(--space-m); border-radius: var(--radius-s); font-weight: 600; display: none; }
 .form-status.is-visible { display: block; }
 .form-status--success { background: #E4F1E1; color: #2F5D2A; }
-.form-status--error { background: var(--color-primary-soft); color: var(--color-primary-dark); }
+.form-status--error { background: var(--color-danger-soft); color: var(--color-danger-dark); }
 
 /* ==========================================================================
    Stopka
@@ -811,7 +827,7 @@ section { position: relative; }
 .footer-brand { display: flex; align-items: center; gap: 0.6em; color: #fff; font-weight: 800; margin-bottom: var(--space-s); font-family: var(--font-base); }
 .footer-brand img { height: 34px; width: auto; }
 .footer-legal { position: relative; z-index: 1; padding-top: var(--space-m); display: flex; flex-wrap: wrap; gap: var(--space-s) var(--space-l); justify-content: space-between; font-size: 0.82rem; color: #9AA0A6; }
-.placeholder-note { font-size: 0.75rem; color: var(--color-accent-yellow); }
+.placeholder-note { font-size: 0.75rem; color: var(--color-warning-on-dark); }
 
 /* ==========================================================================
    CTA banner
