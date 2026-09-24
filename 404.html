@@ -13,8 +13,10 @@
 <style>
   .notfound { min-height: 70vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: var(--space-xl) var(--space-m); }
   .notfound .pixel-figure { width: 220px; margin-bottom: var(--space-l); }
-  .notfound .pixel-figure img { width: 100%; height: auto; display: block; animation: pixel-idle 4.5s ease-in-out infinite; }
-  @media (prefers-reduced-motion: reduce) { .notfound .pixel-figure img { animation: none; } }
+  .notfound .pixel-figure { position: relative; animation: pixel-idle 4.5s ease-in-out infinite; transform-origin: 50% 100%; }
+  .notfound .pixel-figure img { width: 100%; height: auto; display: block; }
+  .notfound .pixel-figure__blink { position: absolute; inset: 0; opacity: 0; animation: pixel-blink 4.2s linear 1s infinite; }
+  @media (prefers-reduced-motion: reduce) { .notfound .pixel-figure, .notfound .pixel-figure__blink { animation: none; } }
   .notfound h1 { font-family: var(--font-display); font-weight: 500; }
 </style>
 </head>
@@ -22,6 +24,7 @@
 <main class="notfound">
   <div class="pixel-figure">
     <img src="assets/img/pixel/pixel-body.png" alt="Pixel wygląda na lekko zagubionego" width="1269" height="1019" loading="eager" decoding="async" />
+    <img class="pixel-figure__blink" src="assets/img/pixel/pixel-body-blink.png" alt="" width="1269" height="1019" decoding="async" />
   </div>
   <h1>Ups, tej strony tu nie ma</h1>
   <p class="lede">Nawet Pixel czasem się zgubi. Wróćmy razem na stronę główną.</p>

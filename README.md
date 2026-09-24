@@ -103,6 +103,12 @@ Poniższe elementy zostały świadomie oznaczone jako wersja robocza / placehold
   folderze — pozycje kafelków są ustawione procentowo względem obrazka
   źródłowego, więc przy innej kompozycji trzeba przeliczyć wartości `left`/
   `top`/`width` w znacznikach `<img>` (sekcje `#top` i `#pixel` w `index.html`).
+  Mruganie to druga wersja postaci z zamkniętymi oczami (`pixel-body-blink.png`).
+- **Rady Pixela** — teksty w dymku po kliknięciu Pixela są w tablicy
+  `PIXEL_TIPS` na początku `assets/js/main.js`; można je dowolnie zmieniać.
+- **Okładki w ofercie** — książki (Seria PIXEL, „Możesz zniknąć”) i dokumenty
+  są pokazane jako poglądowe wizualizacje 3D w CSS. Gdy będą gotowe zdjęcia
+  prawdziwych okładek, podmień bloki `.book3d` w `index.html` na `<img>`.
 
 ## 5. Edycja treści
 
